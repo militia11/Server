@@ -8,8 +8,8 @@ Server::Server(QObject *parent) : QTcpServer(parent)
 void Server::run()
 {
     if(!this->listen(QHostAddress::Any, 1234)){
-        qDebug() << "Nie mozna wystartowac serwera !";
-        // qmessage::error wyswietl ... ... lub jakies sprawdzanie czy juz wystartowal
+        qDebug() << "Nie mozna wystartowac serwera !";  // qmessage::error wyswietl ... ... lub jakies sprawdzanie czy juz wystartowal
+
     }
     else{
         qDebug() << "Server nasluchuje...";    // statusBar wyswietl ... ...
@@ -23,7 +23,7 @@ void Server::receiveData(QByteArray data)
 
 void Server::incomingConnection(int descriptor)
 {
-    qDebug() << descriptor << "Połączony...";
+    qDebug() << descriptor << "Polaczony...";
     SrvThread* thread = new SrvThread(descriptor,this);
 
     connect( thread, SIGNAL( finished() ), thread, SLOT( deleteLater() ) );

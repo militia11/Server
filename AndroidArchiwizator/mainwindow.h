@@ -23,7 +23,6 @@ private slots:
 signals:
 
 private:
-    // kama
     Ui::MainWindow *ui;
     Server* server;
 };

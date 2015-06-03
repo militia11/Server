@@ -24,6 +24,7 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::compareData(QByteArray data)
 {
-    ui->textEdit->setText(data);
+
+    //ui->textEdit->setText(data);
 }
 

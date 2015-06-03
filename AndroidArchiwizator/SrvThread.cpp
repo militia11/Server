@@ -30,7 +30,8 @@ void SrvThread::readyRead()
     }
     qDebug() << descriptor << "Dane : " << data ;// sygnal wyslanie danych
 
-    emit readData(data);
+    qDebug() << data;
+    //emit readData(data);
     // tu zrobic data pobranie i zapisanie do narazie innej klasy pozniej bazy !!!!!!!!!!!
     //QByteArray data2 = dokument robić przerobić dobrze QByte i Array;
                                                  // tu zapis do klienta
@@ -41,7 +42,7 @@ void SrvThread::readyRead()
 }
 void SrvThread::connectionLosted()
 {
-    qDebug() << descriptor << "Rozłączony: " ;
+    qDebug() << descriptor << "Rozlaczony: " ;
     socket->deleteLater();
     exit(0);
 }
