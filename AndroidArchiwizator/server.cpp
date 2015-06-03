@@ -7,7 +7,7 @@ Server::Server(QObject *parent) : QTcpServer(parent)
 
 void Server::run()
 {
-    if(!this->listen(QHostAddress::LocalHost, 1234)){
+    if(!this->listen(QHostAddress::Any, 1234)){
         qDebug() << "Nie mozna wystartowac serwera !";  // qmessage::error wyswietl ... ... lub jakies sprawdzanie czy juz wystartowal
 
     }
