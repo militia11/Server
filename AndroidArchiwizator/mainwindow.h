@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include "server.h"
 #include "SrvThread.h"
-#include<QPixmap>
+#include <QPixmap>
 namespace Ui {
 class MainWindow;
 }
